@@ -14,6 +14,10 @@
   background-color: #ffb733;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -30,6 +34,7 @@ ul {
 a {
   text-decoration: none;
   margin: 0;
+  color: #187ffe;
 }
 
 h1 {
@@ -57,6 +62,7 @@ p {
   font-weight: 400;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  line-height: 2rem;
 }
 
 /* --------- HEADER---------*/
@@ -92,7 +98,7 @@ header .imagotype .logotype {
 }
 
 header .imagotype .logotype:hover {
-  background-color: #64A9FE;
+  background-color: #8dbffe;
 }
 
 header nav {
@@ -115,7 +121,7 @@ header nav ul a {
 }
 
 header nav ul a:hover {
-  border-bottom: 5px solid #64A9FE;
+  border-bottom: 5px solid #8dbffe;
 }
 
 /* --------- MAIN---------*/
@@ -137,11 +143,15 @@ main .intro .description {
   line-height: 4.5rem;
 }
 
-main .motive .title {
+main .column2 {
+  padding: 6rem 8rem 6rem 9rem;
+}
+
+main .column2 .title {
   margin: 0 0 1.7rem 0;
 }
 
-main .motive .content {
+main .column2 .content {
   -webkit-column-count: 2;
   -moz-column-count: 2;
   column-count: 2;
@@ -149,33 +159,142 @@ main .motive .content {
   line-height: 1.7rem;
 }
 
-main .motive .content p {
+main .column2 .content p {
   margin: 1.7rem 0 0 0;
 }
 
-main .motive .content p:first-child {
+main .column2 .content p:first-child {
   margin: 0;
+}
+
+main .column2 a {
+  color: #187ffe;
+  font-weight: 600;
+}
+
+main .columnImgLeft {
+  padding: 6rem 8rem 6rem 9rem;
+}
+
+main .columnImgLeft .title {
+  margin: 0 0 2.4rem 0;
+}
+
+main .columnImgLeft .row1 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+main .columnImgLeft .row1 .image {
+  width: 48%;
+}
+
+main .columnImgLeft .row1 .image img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+main .columnImgLeft .row1 .text {
+  width: calc(52% - 2rem);
+  margin: .6rem 0 0 0;
+}
+
+main .columnImgLeft .row1 .text:first-child {
+  margin: 0;
+}
+
+main .columnImgLeft .row1 .text a {
+  color: #187ffe;
+  font-weight: 600;
+}
+
+main .columnImgLeft .row2 {
+  margin: 2rem 0 0 0;
+}
+
+main .columnImgLeft .row2 p {
+  margin: .6rem 0 0 0;
 }
 
 main .section1 {
   background-color: #b0d3fe;
   color: #282828;
-  padding: 6rem 5rem 6rem 6rem;
-}
-
-main .section1 a {
-  color: #187ffe;
-  font-weight: 600;
 }
 
 main .section2 {
   background-color: #282828;
   color: white;
-  padding: 6rem 5rem 6rem 6rem;
 }
 
-main .section2 a {
+main .section3 {
+  background-color: #ffe4b3;
+  color: #282828;
+}
+
+main .list {
+  margin: 0 0 0 3rem;
+}
+
+main .list .element {
+  margin: .2rem 0 0 0;
+}
+
+main .list .element a {
+  font-size: 1.1rem;
+  color: inherit;
+  font-weight: inherit;
+  transition: .5s;
+}
+
+main .list .element a:hover {
   color: #64A9FE;
+}
+
+/* --------- TABLE---------*/
+.tg {
+  padding: 2rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+}
+
+.tg tr {
+  text-align: left;
+}
+
+.tg tr:first-child {
+  background-color: #1b1b1b;
+}
+
+.tg th {
+  padding: 1rem 2rem 1rem 2rem;
+  border-bottom: 1.2px solid #4e4e4e;
+}
+
+.tg td {
+  padding: 1rem 2rem 1rem 2rem;
+  border-bottom: 1.2px solid #4e4e4e;
+}
+
+/* --------- FOOTER---------*/
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #1b1b1b;
+  padding: 2rem;
+}
+
+footer a {
+  margin: 0 0 0 .5rem;
+  color: white;
+  transition: .2s;
+}
+
+footer a:hover {
+  color: #7db7fe;
 }
 
 /* --------- SCROLLBAR ---------*/
@@ -185,7 +304,7 @@ main .section2 a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #282828;
+  background: #8e8e8e;
   -webkit-box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
   box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
@@ -194,11 +313,11 @@ main .section2 a {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #64A9FE;
+  background: #353535;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #318dfe;
+  background: #0f0f0f;
 }
