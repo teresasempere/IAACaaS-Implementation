@@ -11,7 +11,7 @@
 }
 
 *::selection {
-  background-color: #bbe6d8;
+  background-color: #ffb733;
 }
 
 body {
@@ -28,7 +28,6 @@ ul {
 }
 
 a {
-  color: #64A9FE;
   text-decoration: none;
   margin: 0;
 }
@@ -62,11 +61,11 @@ p {
 
 /* --------- HEADER---------*/
 header {
-  background-color: rgba(40, 40, 40, 0.9);
+  background-color: rgba(40, 40, 40, 0.95);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 1rem;
+  padding: .7rem 1rem .7rem 1rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -82,13 +81,13 @@ header .imagotype .logotype {
   justify-content: center;
   align-items: center;
   color: #282828;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: .12rem;
   background-color: white;
   border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   transition: .3s;
 }
 
@@ -161,5 +160,45 @@ main .motive .content p:first-child {
 main .section1 {
   background-color: #b0d3fe;
   color: #282828;
-  padding: 6rem 5rem 5rem 6rem;
+  padding: 6rem 5rem 6rem 6rem;
+}
+
+main .section1 a {
+  color: #187ffe;
+  font-weight: 600;
+}
+
+main .section2 {
+  background-color: #282828;
+  color: white;
+  padding: 6rem 5rem 6rem 6rem;
+}
+
+main .section2 a {
+  color: #64A9FE;
+}
+
+/* --------- SCROLLBAR ---------*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #282828;
+  -webkit-box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 1px 1px 5px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #64A9FE;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #318dfe;
 }

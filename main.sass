@@ -3,7 +3,7 @@ $primary-color: #282828
 $secundary-color: #64A9FE
 $typecolorW: white
 $typecolorB: #282828
-$contrast-color: #95D9C3
+$contrast-color: orange
 $background: #282828
 
 /* --------- TYPOGRAPHY ---------*/
@@ -13,7 +13,6 @@ $background: #282828
 
 $serif_font: 'Lora', serif
 $sans_font: 'Open Sans', sans-serif
-
 
 
 /* --------- MIXINS---------*/
@@ -44,7 +43,6 @@ ul
     padding: 0
 
 a
-    color: $secundary-color
     text-decoration: none
     margin: 0
 
@@ -75,11 +73,11 @@ p
 /* --------- HEADER---------*/
 
 header
-    background-color: rgba($background, .9)
+    background-color: rgba($background, .95)
     display: flex
     flex-flow: row wrap
     justify-content: space-between
-    padding: 1rem
+    padding: .7rem 1rem .7rem 1rem
     position: fixed
     width: 100%
     top: 0
@@ -91,13 +89,13 @@ header
             justify-content: center
             align-items: center
             color: $typecolorB
-            font-size: 1.5rem
+            font-size: 1.1rem
             font-weight: 800
             letter-spacing: .12rem
             background-color: $typecolorW
             border-radius: 50%
-            width: 4.5rem
-            height: 4.5rem
+            width: 3.5rem
+            height: 3.5rem
             transition: .3s
             &:hover
                 background-color: $secundary-color
@@ -147,4 +145,34 @@ main
     .section1
         background-color: lighten($secundary-color, 15)
         color: $typecolorB
-        padding: 6rem 5rem 5rem 6rem
+        padding: 6rem 5rem 6rem 6rem
+        a
+            color: darken($secundary-color,15)
+            font-weight: 600
+    .section2
+        background-color: $primary-color
+        color: $typecolorW
+        padding: 6rem 5rem 6rem 6rem
+        a
+            color: $secundary-color
+
+
+/* --------- SCROLLBAR ---------*/
+::-webkit-scrollbar
+    width: 10px
+
+/* Track */
+::-webkit-scrollbar-track
+    background: $background
+    -webkit-box-shadow: inset 1px 1px 5px 2px rgba(0,0,0,0.16)
+    -moz-box-shadow: inset 1px 1px 5px 2px rgba(0,0,0,0.16)
+    box-shadow: inset 1px 1px 5px 2px rgba(0,0,0,0.16)
+    border-radius: 5px
+/* Handle */
+::-webkit-scrollbar-thumb
+    background: $secundary-color
+    border-radius: 5px
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+    background: darken($secundary-color, 10)
